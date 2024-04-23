@@ -1,18 +1,25 @@
 {
   "name": "web-scraping",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./build/main.js",
+    "tsc": "tsc",
+    "watchMode": "tsc -w"
   },
   "keywords": [],
   "author": "Pablo Olmedo",
   "license": "ISC",
   "dependencies": {
     "cheerio": "1.0.0-rc.12",
-    "json2csv": "^6.0.0-alpha.2",
+    "json2csv": "6.0.0-alpha.2",
     "request-promise": "4.2.6"
+  },
+  "devDependencies": {
+    "@types/cheerio": "0.22.35",
+    "@types/json2csv": "5.0.7",
+    "@types/request-promise": "4.1.51",
+    "typescript": "5.4.5"
   }
 }
