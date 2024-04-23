@@ -1,3 +1,5 @@
+//deprecando este archivo js
+
 const cheerio = require("cheerio");
 const fs = require('fs')
 const { Parser } = require('json2csv')
