@@ -1,6 +1,23 @@
-import Scraper from "./scraper"
+import Scraper from "./classes/scraper";
+import Converter from "./classes/converter";
 
-const scraper1 = new Scraper('videojuegos');
+const scraper = new Scraper('videojuegos');
+const converter = new Converter();
 
-scraper1;
+
+(async()=>{
+    await scraper.initiateScraping()
+})().then(()=>{
+    converter.dataToJSON(scraper.dataCompaniesArray)
+    converter.dataToCSV(scraper.dataCompaniesArray)
+});{
+    
+}
+
+
+
+
+  
+
+
 

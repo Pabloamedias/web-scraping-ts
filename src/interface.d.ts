@@ -1,4 +1,4 @@
-interface DataCompany {
+export interface DataCompany {
     title: string
     category: string
     description: string
