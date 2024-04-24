@@ -54,7 +54,7 @@ class Scraper {
 
   private async getCompaniesUrl(): Promise<void> {
     try {
-      console.log("get companies url started");
+      console.log("getCompaniesUrl started");
       for (let url of this.pagesToScrapArray) {
         const response = await requestPromise(url);
         const $ = cheerio.load(response);
@@ -66,13 +66,13 @@ class Scraper {
         `get companies urls from topic: ${this.companiesTopic} finished, there are ${this.companiesUrlArray.length} companies urls to scrap`
       );
     } catch (error: any) {
-      console.error(error);
+      console.error(`getCompaniesUrl failed, error: ${error}`);
     }
   }
 
   private async getDataCompany() {
     try {
-      console.log("Scrape data started");
+      console.log("getDataCompany started");
 
       for (let companieUrl of this.companiesUrlArray) {
         console.log(`scraping url: ${companieUrl}`);
@@ -109,7 +109,7 @@ class Scraper {
         `scraping data successful, a total of ${this.dataCompaniesArray.length} companies has been scraped`
       );
     } catch (error) {
-      console.error(error);
+      console.error(`getDataCompany failed: ${error}`);
     }
   }
 }
