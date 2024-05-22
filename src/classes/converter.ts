@@ -4,7 +4,7 @@ import fs from "fs";
 import { Parser } from "json2csv";
 
 class Converter {
-  basePath: string = config.OUTPUTDATADIRECTORY;
+  basePath: string = config.OUTPUT_DATA_DIRECTORY;
   constructor() {
     if (!fs.existsSync(this.basePath)) {
       console.log(

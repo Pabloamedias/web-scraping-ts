@@ -1,7 +1,10 @@
 import Scraper from "./classes/scraper";
 import Converter from "./classes/converter";
+import config from "./config";
 
-const scraper = new Scraper('videojuegos');
+const companieTopic = config.TOPIC_TO_SCRAP
+
+const scraper = new Scraper(companieTopic);
 
 
 

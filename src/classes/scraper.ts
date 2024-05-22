@@ -4,7 +4,7 @@ import config from "../config";
 import { DataCompany } from "../interface";
 
 class Scraper {
-  baseUrl: string = config.BASEURL;
+  baseUrl: string = config.BASE_URL;
   pagesToScrapArray: string[] = [];
   companiesUrlArray: string[] = [];
   dataCompaniesArray: DataCompany[] = [];
