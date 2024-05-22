@@ -1,4 +1,4 @@
 export default   {
     BASEURL : process.env.BASEURL || 'https://chileservicios.com',
-    OUTPUTDATADIRECTORY : process.env.OUTPUTDATADIRECTORY || './outputData'
+    OUTPUT_DATA_DIRECTORY : process.env.OUTPUT_DATA_DIRECTORY || './outputData'
 }
